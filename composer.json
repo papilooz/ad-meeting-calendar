@@ -1,0 +1,16 @@
+{
+    "name": "papilooz/ad-meeting-calendar",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Papilooz\\AdMeetingCalendar\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "papilooz",
+            "email": "manriquequervie@gmail.com"
+        }
+    ],
+    "require": {}
+}
