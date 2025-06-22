@@ -4,12 +4,16 @@ require_once __DIR__ . '/../vendor/autoload.php';
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->load();
 
+$isDocker = file_exists('/.dockerenv');
+
 return [
-    'pg_host'    => $_ENV['PG_HOST'],
-    'pg_port'    => $_ENV['PG_PORT'],
+    'pg_host'    => $isDocker ? 'postgresql' : 'localhost',
+    'pg_port'    => $isDocker ? '5432' : '5112',
     'pg_db'      => $_ENV['PG_DB'],
     'pg_user'    => $_ENV['PG_USER'],
     'pg_pass'    => $_ENV['PG_PASS'],
-    'mongo_uri'  => $_ENV['MONGO_URI'],
+    'mongo_uri'  => $isDocker
+        ? 'mongodb://root:rootPassword@mongodb:27017'
+        : 'mongodb://root:rootPassword@localhost:27111',
     'mongo_db'   => $_ENV['MONGO_DB'],
 ];

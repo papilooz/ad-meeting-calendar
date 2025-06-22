@@ -1,5 +1,6 @@
 <?php
-require_once __DIR__ . '/../utils/envSetter.util.php'; // adjust path if needed
+// ✅ Define $config by loading env values
+$config = require __DIR__ . '/../utils/envSetter.util.php';
 
 $host = $config['pg_host'];
 $port = $config['pg_port'];
@@ -12,9 +13,9 @@ $conn_string = "host=$host port=$port dbname=$dbname user=$username password=$pa
 $dbconn = pg_connect($conn_string);
 
 if (!$dbconn) {
-    echo "❌ Connection Failed: " . pg_last_error() . "  <br>";
+    echo "❌ PostgreSQL connection failed: " . pg_last_error() . "<br>";
     exit();
 } else {
-    echo "✔️ PostgreSQL Connection  <br>";
+    echo "✅ Connected to PostgreSQL<br>";
     pg_close($dbconn);
 }
