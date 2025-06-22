@@ -14,6 +14,9 @@ services:
           action: rebuild
         - path: ./composer.lock
           action: rebuild
+        - path: ./utils               # ✅ Added to sync the utils folder
+          target: /var/www/html/utils
+          action: sync
     depends_on:
       - mongodb
 

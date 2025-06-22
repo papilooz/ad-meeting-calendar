@@ -6,11 +6,3 @@ CREATE TABLE IF NOT EXISTS meetings (
     created_by INTEGER REFERENCES users(id),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-echo "Truncating tables…\n";
-foreach (['meeting_users', 'tasks', 'meetings', 'users'] as $table) {
-  $pdo->exec("TRUNCATE TABLE {$table} RESTART IDENTITY CASCADE;");
-}
-echo "Truncating tables…\n";
-foreach (['meeting_users', 'tasks', 'meetings', 'users'] as $table) {
-  $pdo->exec("TRUNCATE TABLE {$table} RESTART IDENTITY CASCADE;");
-}
