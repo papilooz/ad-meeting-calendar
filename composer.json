@@ -12,5 +12,7 @@
             "email": "manriquequervie@gmail.com"
         }
     ],
-    "require": {}
+    "require-dev": {
+        "mongodb/mongodb": "^2.1"
+    }
 }
