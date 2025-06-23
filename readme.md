@@ -4,7 +4,7 @@
 
 <div align="center">
   <a href="https://github.com/papilooz/ad-meeting-calendar">
-    <img src="./assets/img/elite.png" alt="Elite" width="130" height="100">
+    <img src="./assets/img/yesyes.png" alt="Elite" width="130" height="100">
   </a>
 
   <h3 align="center">The Elite</h3>
@@ -91,30 +91,24 @@ Description of the project in details.
 10. File Structure to follow below.
 
 ```
-AD-Task-2
+AD-ProjectName
 └─ assets
 |   └─ css
-|   |   └─ req.css
-        └─ style.css
+|   |   └─ name.css
 |   └─ img
-|   |   └─ array.png
-        └─ dict.png
-        └─ funct.png
-        └─ frag.png
-        └─ football.jpg
-        └─ facebook.png
-        └─ linkedin.png
-        └─ instagram.png
-        └─ frag.png
-        └─ webdes.jpg
-        └─ quervie.jpg
-        └─ quervie1.jpg
+|   |   └─ name.jpeg/.jpg/.webp/.png
 |   └─ js
 |       └─ name.js
 └─ components
-|   └─ fragments.php
+|   └─ name.component.php
+|   └─ templates
+|      └─ name.component.php
+└─ handlers
+|   └─ name.handler.php
+└─ layout
+|   └─ name.layout.php
 └─ pages
-|  └─ Requirements
+|  └─ pageName
 |     └─ assets
 |     |  └─ css
 |     |  |  └─ name.css
@@ -123,9 +117,12 @@ AD-Task-2
 |     |  └─ js
 |     |     └─ name.js
 |     └─ index.php
-     
+└─ staticData
+|  └─ name.staticdata.php
 └─ utils
-|   └─ Name.utils.php
+|   └─ name.utils.php
+└─ vendor
+└─ .gitignore
 └─ bootstrap.php
 └─ composer.json
 └─ composer.lock
@@ -134,11 +131,11 @@ AD-Task-2
 └─ router.php
 ```
 > The following should be renamed: name.css, name.js, name.jpeg/.jpg/.webp/.png, name.component.php(but not the part of the `component.php`), Name.utils.php(but not the part of the `utils.php`)
-
+<!-- 
 ## Resources
 
 
 | Title        | Purpose                                                                       |Link          |
 | ------------ | ----------------------------------------------------------------------------- |------------- |
 | Font Icons	 | Adding font icons on the website | https://fontawesome.com/icons/trophy?style=solidcom |
-| Floating Objects | Object animation for aesthetic | https://www.w3schools.com/bootstrap5/bootstrap_form_floating_labels.php |
+| Floating Objects | Object animation for aesthetic | https://www.w3schools.com/bootstrap5/bootstrap_form_floating_labels.php | -->
